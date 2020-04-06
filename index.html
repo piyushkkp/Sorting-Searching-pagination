@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+    </head>
+    
+    <body>
+        <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for names or emails.." title="Type in a name">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th onclick="sortColumn('id')">ID</th>
+                    <th onclick="sort_table(people, 1, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Firstname</th>
+                    <th onclick="sort_table(people, 2, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Lastname</th>
+                    <th onclick="sort_table(people, 3, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Email</th>
+                    <th onclick="sort_table(people, 4, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Gender</th>
+                    <th onclick="sort_table(people, 5, asc2); asc2 *= -1; asc3 = 1; asc1 = 1;">Payment</th>
+                </tr>
+            </thead>
+            <tbody id="tableData"></tbody>
+            
+        </table>
+        <a href="javascript:prevPage()" id="btn_prev">Prev</a>
+        <a href="javascript:nextPage()" id="btn_next">Next</a>
+        page: <span id="page"></span>
+    </body>
+</html>
